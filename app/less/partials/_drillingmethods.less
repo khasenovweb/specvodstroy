@@ -1,0 +1,118 @@
+.drillingmethods {
+    background-color: #FAFBFD;
+    padding-top: 60rem;
+    padding-bottom: 60rem;
+}
+
+.drillingmethods__main {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    grid-gap: 30rem;
+}
+
+.drillingmethods__main__img__wrapper {
+    position: relative;
+}
+
+.drillingmethods__main__img {
+    width: 624rem;
+    height: 678rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.drillingmethods__items {
+    margin-top: 40rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 47rem;
+}
+
+.drillingmethods__item {
+    display: flex;
+    align-items: center;
+}
+
+.drillingmethods__item__icon {
+    width: 110rem;
+    min-width: 110rem;
+    height: 110rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-right: 30rem;
+}
+
+.drillingmethods__item__title {
+    font-weight: 600;
+    font-size: 16rem;
+}
+
+
+.drillingmethods__alertblock {
+    margin-top: 50rem;
+}
+.drillingmethods__alert {
+    background-color: #fff;
+    padding: 26rem;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.drillingmethods__alert__icon {
+    width: 65rem;
+    min-width: 65rem;
+    height: 60rem;
+    margin-right: 46rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.drillingmethods__alert__text {
+    font-size: 18px;
+}
+
+@media screen and (max-width: 800px) {
+    .drillingmethods {
+        padding-top: 40rem;
+        padding-bottom: 40rem;
+    }
+    .drillingmethods__main {
+        grid-template-columns: 1fr;
+    }
+    .drillingmethods__main__img__wrapper {
+        display: none;
+    }
+    .drillingmethods__items {
+        grid-template-columns: 1fr;
+        grid-gap: 20rem;
+        margin-top: 20rem;
+    }
+    .drillingmethods__item__icon {
+        margin-right: 20rem;
+    }
+    .drillingmethods__item__title {
+        font-size: 14rem;
+    }
+    .drillingmethods__alert {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15rem;
+        margin-top: 30rem;
+    }
+    .drillingmethods__alert__text {
+        margin-top: 12rem;
+        font-size: 14rem;
+    }
+    .drillingmethods__alert__icon {
+        width: 34rem;
+        min-width: 34rem;
+        height: 31rem;
+    }
+}

@@ -1,0 +1,212 @@
+.promotion {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding-top: 131rem;
+    padding-bottom: 131rem;
+    * {
+        position: relative;
+    }
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+    }
+}
+
+.promotion__content__wrapper {
+    position: relative;
+    &:before {
+        content: '';
+        display: block;
+        height: 20rem;
+        width: ~"calc(100% - 30rem)";
+        background-color: #fff;
+        position: absolute;
+        left: 15rem;
+        bottom: -10rem;
+        border-radius: 10rem;
+    }
+}
+.promotion__content {
+    // background-color: #fff;
+    border-radius: 10rem;
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.promotion__content__text {
+    padding: 50rem 40rem;
+    padding-right: 0;
+    position: relative;
+    .btn {
+        margin-top: 30rem;
+        font-size: 16rem;
+        position: relative;
+        z-index: 3;
+    }
+}
+
+.promotion__content__text__triangle {
+    display: block;
+    position: absolute;
+    right: -180rem;
+    top: 0;
+    border: 180rem solid transparent; 
+    border-left: 1000rem solid white; 
+    z-index: 2;
+}
+
+.promotion__content__label {
+    font-size: 26rem;
+    font-weight: bold;
+    color: @orange;
+    position: relative;
+    z-index: 3;
+}
+
+.promotion__content__title {
+    font-size: 40rem;
+    font-weight: bold;
+    color: @black;
+    line-height: 120%;
+    margin-top: 25rem;
+    position: relative;
+    z-index: 3;
+}
+
+.promotion__content__desc {
+    margin-top: 31rem;
+    line-height: 150%;
+    font-size: 16rem;
+    position: relative;
+    z-index: 3;
+}
+
+.promotion__content__img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.promotion__content__wrapper__parallax {
+    position: absolute;
+    &:nth-child(1) {
+        left: -200rem;
+        top: -150rem;
+        .promotion__content__wrapper__parallax__img {
+            width: 276rem;
+            height: 239rem;
+        }
+    }
+    &:nth-child(2) {
+        right: -100rem;
+        top: -100rem;
+        z-index: 2;
+        .promotion__content__wrapper__parallax__img {
+            width: 206rem;
+            height: 196rem;
+        }
+    }
+    &:nth-child(3) {
+        right: -100rem;
+        bottom: -100rem;
+        .promotion__content__wrapper__parallax__img {
+            width: 276rem;
+            height: 239rem;
+        }
+    }
+}
+
+.promotion__content__wrapper__parallax__img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
+// ==============================================//
+// ================= MEDIA ======================//
+// ==============================================//
+
+@media screen and (max-width: 800px) {
+    .promotion {
+        padding-top: 42rem;
+        padding-bottom: 42rem;
+    }
+    .promotion__content {
+        grid-template-columns: 1fr;
+    }
+    .promotion__content__img {
+        height: 200rem;
+        order: 1;
+    }
+    .promotion__content__text {
+        padding: 20rem;
+        order: 2;
+    }
+    .promotion__content__text__triangle {
+        border: 50px solid transparent;
+        right: initial;
+        left: 0;
+        top: -50rem;
+    }
+    .promotion__content__label {
+        font-size: 14rem;
+        margin-top: -30rem;
+    }
+    .promotion__content__title {
+        font-size: 20rem;
+        margin-top: 10rem;
+    }
+    .promotion__content__desc {
+        font-size: 14rem;
+        margin-top: 10rem;
+    }
+    .promotion__content__text .btn {
+        width: 100%;
+        margin-top: 15rem;
+        font-size: 14rem;
+    }
+    .promotion__content__wrapper__parallax {
+        &:nth-child(1) {
+            left: -100rem;
+            top: -100rem;
+            .promotion__content__wrapper__parallax__img {
+                width: 153rem;
+                height: 133rem;
+            }
+        }
+        &:nth-child(2) {
+            right: -100rem;
+            top: -100rem;
+            z-index: 2;
+            .promotion__content__wrapper__parallax__img {
+                width: 152rem;
+                height: 139rem;
+            }
+        }
+        &:nth-child(3) {
+            right: -100rem;
+            bottom: -100rem;
+            .promotion__content__wrapper__parallax__img {
+                width: 159rem;
+                height: 142rem;
+            }
+        }
+    }
+}
+
+// ==============================================//
+// ============= END MEDIA ======================//
+// ==============================================//

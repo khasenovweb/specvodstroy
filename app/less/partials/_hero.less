@@ -1,0 +1,143 @@
+.hero {
+    padding: 50rem 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255,255,255,0.8);
+    }
+}
+.hero__content {
+    display: grid;
+    grid-template-columns: 1fr 400rem;
+    align-items: center;
+    grid-gap: 200rem;
+}
+.hero__text {
+    position: relative;
+}
+.hero__title {
+    font-weight: 800;
+    font-size: 64rem;
+    line-height: 110%;
+    color: #202020;
+    .color {
+        color: @blue;
+    }
+}
+
+.hero__desc {
+    font-weight: 600;
+    font-size: 24rem;
+    margin-top: 40rem;
+}
+
+.hero__form {
+    background-color: #fff;
+    border-radius: 5rem;
+    padding: 30rem;
+    position: relative;
+    form {
+        display: grid;
+        grid-template-rows: repeat(auto-fill, minmax(max-content, 0));
+        grid-gap: 15rem;
+        margin-top: 20rem;
+        justify-items: center;
+        input {
+            width: 100%;
+        }
+    }
+    .parallax {
+        &:nth-child(1) {
+            right: -35%;
+            top: -10%;
+            .parallax__img {
+                width: 209rem;
+                height: 252rem;
+            }
+        }
+        &:nth-child(2) {
+            right: -33%;
+            bottom: -10%;
+            .parallax__img {
+                width: 201rem;
+                height: 192rem;
+            }
+        }
+    }
+}
+.hero__form__input {
+    width: 100%;
+}
+
+.hero__form__title {
+    font-weight: bold;
+    font-size: 22rem;
+    line-height: 130%;
+    text-align: center;
+    color: #141414;
+}
+.hero__form__input__politics {
+    display: flex;
+    align-items: flex-start;
+    .checkbox {
+        margin-top: 5rem;
+        margin-right: 15rem;
+    }
+}
+.hero__form__input__politics__title {
+    font-size: 12px;
+    color: #939393;
+    a {
+        font-size: 12px;
+        color: #939393;
+    }
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .hero__content {
+        grid-template-columns: 1fr;
+        grid-gap: 20rem;
+    }
+    .hero__title {
+        font-weight: 800;
+        font-size: 30px;
+    }
+    .hero__desc {
+        margin-top: 20rem;
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .hero__form {
+        padding: 20rem;
+    }
+    .hero__form__title {
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .hero__form .parallax:nth-child(1) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .hero__form .parallax:nth-child(2) {
+        right: -10%;
+        bottom: -10%;
+    }
+    .hero__form .parallax:nth-child(2) .parallax__img {
+        width: 90rem;
+        height: 86rem;
+    }
+    
+}

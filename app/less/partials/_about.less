@@ -1,0 +1,135 @@
+.about {
+    padding-top: 70rem;
+    padding-bottom: 70rem;
+    min-height: 510rem;
+}
+.about__left__video__wrapper {
+    position: relative;
+    width: 516rem;
+    height: 370rem;
+    float: left;
+    margin-right: 57rem;
+    margin-bottom: 30rem;
+}
+.about__left__video {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10rem;
+    position: relative;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        transition: 0.3s;
+    }
+    &:hover {
+        &:before {
+            background-color: rgba(0,0,0,0.3);
+        }
+        .about__left__video__play {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+    }
+}
+
+
+.about__left__video__play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+}
+
+.about__left__text {
+    font-size: 16rem;
+    line-height: 150%;
+}
+
+.about__left__social {
+    display: block;
+    width: 32rem;
+    height: 32rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.about__left__socials {
+    display: flex;
+    align-items: center;
+    margin-top: 26rem;
+}
+
+.about__left__social {
+    margin-right: 20rem;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+
+.about__left__video__parallax__wrapper {
+    position: absolute;
+    &:nth-child(1) {
+        left: -150rem;
+        bottom: -150rem;
+        .about__left__video__parallax__img {
+            width: 545rem;
+            height: 543rem;
+        }
+    }
+    &:nth-child(2) {
+        right: -50rem;
+        top: -100rem;
+        .about__left__video__parallax__img {
+            width: 225rem;
+            height: 265rem;
+        }
+    }
+}
+
+.about__left__video__parallax__img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
+// ==============================================//
+// ================= MEDIA ======================//
+// ==============================================//
+
+@media screen and (max-width: 700px) {
+    .about__left__video__wrapper {
+        width: 100%;
+        float: none;
+    }
+    .about__left__text {
+        font-size: 14rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about__left__video__wrapper {
+        height: 250rem;
+    }
+}
+
+// ==============================================//
+// ============= END MEDIA ======================//
+// ==============================================//
