@@ -170,6 +170,36 @@
             });
         });
         // =================== END modal__form ====================== //
+		// ======================= modal__form ====================== //
+        $("form[data-validate='formblock__form']").each(function (i, el) {
+            $(el).validate({
+                rules: {
+                    phone: "phone",
+                    name: {
+                        required: true
+                    },
+                    datetime: {
+                        required: true
+                    },
+                },
+                messages: {
+                    name: {
+                        required: "Введите ваше имя"
+                    },
+                    name: {
+                        required: "Введите дату и время"
+                    },
+                },
+                submitHandler: function(form) {
+                    var data = $(form).serialize();
+                    console.log('Валидно');
+                    
+                }
+            });
+        });
+        // =================== END modal__form ====================== //
+
+		
 	</script>
 </body>
 </html>

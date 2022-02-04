@@ -1,0 +1,89 @@
+.formblock {
+    background-color: @blue;
+    color: white;
+    .sec__title {
+        color: white;
+    }
+}
+
+.formblock__content {
+    padding-left: 330rem;
+    position: relative;
+    padding-top: 50rem;
+    padding-bottom: 50rem;
+}
+
+.formblock__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 250rem;
+    grid-gap: 12rem;
+    margin-top: 22rem;
+    input {
+        background-color: #fff;
+    }
+    input[name="name"] {
+        order: 1;
+    }
+    input[name="phone"] {
+        order: 2;
+    }
+    input[name="datetime"] {
+        order: 3;
+    }
+    .btn {
+        order: 4;
+        min-width: 182rem;
+    }
+    .formblock__form__politics{
+        order: 5;
+        grid-column: span 4;
+    }
+}
+
+.formblock__form__politics {
+    display: flex;
+    align-items: flex-start;
+    .checkbox {
+        margin-top: 3rem;
+        margin-right: 13rem;
+    }
+}
+.formblock__form__politics__title {
+    font-size: 12rem;
+    a {
+        color: white;
+    }
+}
+
+.formblock__img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 297rem;
+    height: auto;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .formblock__content {
+        padding-top: 36rem;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .formblock__img {
+        position: static;
+        margin-top: 30rem;
+    }
+    .formblock__form {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .formblock__form .formblock__form__politics {
+        grid-column: span 1;
+    }
+}
