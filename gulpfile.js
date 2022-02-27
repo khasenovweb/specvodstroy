@@ -42,7 +42,7 @@ function js_compile() {
     return gulp
         .src("app/js/main.js")
         .pipe(fileinclude())
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest("dist/js"))
         .pipe(browserSync.stream());
 }

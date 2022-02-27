@@ -1,0 +1,191 @@
+.reviews {
+    // padding-top: 47rem;
+    padding-bottom: 66rem;
+    background-color: #fafbfd;
+}
+
+.reviews__slider {
+    button.owl-prev {
+        position: absolute;
+        left: -60rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    button.owl-next {
+        position: absolute;
+        right: -60rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.reviews__slider__item {
+    background-color: #fff;
+    padding: 30rem;
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    grid-gap: 45rem;
+}
+
+.reviews__slider__wrapper {
+    padding: 0 140rem;
+    margin-top: 27rem;
+}
+
+.reviews__slider__item__img {
+    width: 100%;
+    height: 400rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5rem;
+}
+
+.reviews__slider__item__video {
+    width: 100%;
+    height: 400rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: 0.3s;
+    }
+    &:hover {
+        &:before {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        .reviews__slider__item__video__play {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+    }
+}
+
+.reviews__slider__item__clientdata {
+    display: flex;
+    align-items: center;
+}
+
+.reviews__slider__item__clientdata__avatar {
+    width: 64rem;
+    min-width: 64rem;
+    height: 64rem;
+    border-radius: 5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-right: 22rem;
+}
+
+.reviews__slider__item__clientdata__name {
+    font-size: 20rem;
+    font-weight: bold;
+    color: @black;
+}
+
+.reviews__slider__item__clientdata__typework {
+    font-weight: 600;
+    font-size: 14rem;
+    color: @blue;
+    margin-top: 3rem;
+}
+
+.reviews__slider__item__clientdata {
+    margin-top: 30rem;
+}
+
+.reviews__slider__item__right__text {
+    margin-top: 30rem;
+    line-height: 160%;
+    font-size: 16rem;
+    color: @black;
+}
+
+.reviews__slider__dots {
+    margin-top: 26rem;
+    display: flex;
+    justify-content: center;
+    button.owl-dot {
+        width: 8rem;
+        height: 8rem;
+        background-color: @blue;
+        border-radius: 100%;
+        border: none;
+        margin: 5rem;
+        cursor: pointer;
+        &.active {
+            background: radial-gradient(
+                    47.41% 82.95% at 51.46% -4.55%,
+                    rgba(255, 255, 255, 0.4) 0%,
+                    rgba(255, 255, 255, 0.4) 0.01%,
+                    rgba(255, 255, 255, 0) 100%
+                ),
+                #ff4c0c;
+        }
+    }
+}
+
+.reviews__slider__item__video__play {
+    width: 36rem;
+    height: 44rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+}
+
+// ==============================================//
+// ================= MEDIA ======================//
+// ==============================================//
+
+@media screen and (max-width: 700px) {
+    .reviews {
+        padding-top: 37rem;
+        padding-bottom: 37rem;
+    }
+    .reviews__slider__item {
+        grid-template-columns: 1fr;
+        grid-gap: 20rem;
+        padding: 15rem;
+    }
+    .reviews__slider__wrapper {
+        padding: 0;
+    }
+    .reviews__slider__item__video {
+        height: 266rem;
+    }
+    .reviews__slider__item__img {
+        height: 266rem;
+    }
+    .reviews__slider__item__right__text {
+        font-size: 14rem;
+    }
+    .reviews__slider__item__clientdata {
+        margin-top: 0;
+    }
+    .reviews__slider__item__clientdata__name {
+        font-size: 16rem;
+    }
+    .reviews__slider__item__right__text {
+        margin-top: 10rem;
+    }
+}
+
+// ==============================================//
+// ============= END MEDIA ======================//
+// ==============================================//

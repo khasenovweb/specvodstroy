@@ -2,7 +2,7 @@
 
 @blue: #315283;
 @black: #141414;
-@orange: #FF4C0C;
+@orange: #ff4c0c;
 
 * {
     margin: 0;
@@ -10,7 +10,7 @@
     outline: none;
     list-style-type: none;
     box-sizing: border-box;
-    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     text-decoration: none;
 }
 
@@ -39,7 +39,13 @@ body {
 }
 
 .btn {
-    background: radial-gradient(47.41% 82.95% at 51.46% -4.55%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 0.01%, rgba(255, 255, 255, 0) 100%), #FF4C0C;
+    background: radial-gradient(
+            47.41% 82.95% at 51.46% -4.55%,
+            rgba(255, 255, 255, 0.4) 0%,
+            rgba(255, 255, 255, 0.4) 0.01%,
+            rgba(255, 255, 255, 0) 100%
+        ),
+        #ff4c0c;
     box-shadow: 0px 4px 4px rgba(255, 71, 13, 0.3);
     border-radius: 5px;
     color: white;
@@ -55,10 +61,22 @@ body {
     cursor: pointer;
     transition: 0.3s;
     &:hover {
-        background: radial-gradient(47.41% 82.95% at 51.46% -4.55%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 0.01%, rgba(255, 255, 255, 0) 100%), #CE5023;
+        background: radial-gradient(
+                47.41% 82.95% at 51.46% -4.55%,
+                rgba(255, 255, 255, 0.4) 0%,
+                rgba(255, 255, 255, 0.4) 0.01%,
+                rgba(255, 255, 255, 0) 100%
+            ),
+            #ce5023;
     }
     &.blue {
-        background: radial-gradient(47.41% 82.95% at 51.46% -4.55%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 0.01%, rgba(255, 255, 255, 0) 100%), #315283;
+        background: radial-gradient(
+                47.41% 82.95% at 51.46% -4.55%,
+                rgba(255, 255, 255, 0.4) 0%,
+                rgba(255, 255, 255, 0.4) 0.01%,
+                rgba(255, 255, 255, 0) 100%
+            ),
+            #315283;
         box-shadow: none;
     }
     &:disabled {
@@ -89,25 +107,25 @@ input {
     padding-left: 20rem;
     padding-right: 20rem;
     font-size: 14rem;
-    border: 1px solid #EFEFEF;
+    border: 1px solid #efefef;
     border-radius: 5rem;
     background: rgba(245, 245, 245, 0.5);
     font-weight: 600;
     color: @black;
     width: 100%;
     &::placeholder {
-        color: #B5B5B5;
+        color: #b5b5b5;
         font-weight: 600;
     }
     &.error {
-        border: 1px solid #FEACAC;
-        color: #EC3D3D;
+        border: 1px solid #feacac;
+        color: #ec3d3d;
         &::placeholder {
-            color: #EC3D3D;
+            color: #ec3d3d;
         }
     }
     &.valid {
-        border: 1px solid #9FCA9C;
+        border: 1px solid #9fca9c;
     }
 }
 
@@ -131,6 +149,16 @@ label.error {
         text-align: center;
     }
 }
+.text-orange {
+    color: @orange;
+    font-weight: normal;
+    margin-top: 10rem;
+}
+.text-blue {
+    color: @blue;
+    font-weight: normal;
+    margin-top: 10rem;
+}
 
 // ============================================================= //
 // ======================= checkbox ============================ //
@@ -140,7 +168,7 @@ label.error {
     input {
         display: none;
         &:checked + .checkbox__custom {
-            background-color: #56B65F;
+            background-color: #56b65f;
             .checkbox__custom__circle {
                 background-color: #fff;
                 transform: translateX(10rem);
@@ -154,7 +182,7 @@ label.error {
     min-width: 22rem;
     height: 12rem;
     border-radius: 100rem;
-    background-color: #E0E5EC;
+    background-color: #e0e5ec;
     position: relative;
     transition: 0.3s;
 }
@@ -165,7 +193,7 @@ label.error {
     min-width: 8rem;
     height: 8rem;
     border-radius: 100%;
-    background-color: #B1BBCA;
+    background-color: #b1bbca;
     position: absolute;
     left: 2rem;
     top: 2rem;
@@ -195,33 +223,29 @@ label.error {
     background-size: cover;
 }
 
-
-
 @import "partials/_header.less";
 @import "partials/_navbar.less";
 @import "partials/_hero.less";
 @import "partials/_anchors.less";
 @import "partials/_preims.less";
 @import "partials/_quizblock.less";
+@import "partials/_contacts.less";
+@import "partials/_ourwork.less";
+@import "partials/_onework.less";
 
-
-
-
-
-
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
     html {
         font-size: 0.8px;
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     html {
         font-size: 0.7px;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
     html {
         font-size: 1px;
     }

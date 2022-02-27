@@ -1,0 +1,33 @@
+.onework__photos {
+    margin-top: 50rem;
+}
+
+.onework__photos__items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 30rem;
+}
+
+.onework__photos__item {
+    width: 100%;
+    padding-bottom: 71%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.onework__photos__items {
+    margin-top: 48rem;
+}
+
+.onework__photos__item {
+    border-radius: 5rem;
+}
+
+@media screen and (max-width: 850px) {
+    .onework__photos__items {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10rem;
+        margin-top: 23rem;
+    }
+}

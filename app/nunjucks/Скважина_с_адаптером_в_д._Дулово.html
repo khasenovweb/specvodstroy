@@ -1,0 +1,139 @@
+{% set title = 'Главная' %}
+{% extends 'layouts/_main.html' %}
+{% block content %}
+
+<!-- ================================================================ -->
+<!-- ========================== onework ============================= -->
+<!-- ================================================================ -->
+<section class="onework sec blue">
+    <div class="container">
+        <h2 class="sec__title">Скважина с адаптером в д. Дулово</h2>
+        <ul class="hero__bredcrumbs" itemscope="bredcrumbs" itemtype="http://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a href="/" itemprop="item">
+                    <span itemprop="name">Главная</span>
+                </a>
+                <meta itemprop="position" content="1">
+            </li>
+            <span class="hero__bredcrumbs__separator">/</span>
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a href="/zally/banketnyj-zal-na-karbysheva/" itemprop="item">
+                    <span itemprop="name">Наши работы</span>
+                </a>
+                <meta itemprop="position" content="2">
+            </li>
+        </ul>
+        <div class="contacts__mapblock">
+            <div class="contacts__mapblock__text">
+                <div class="contacts__mapblock__text__items">
+                    <div class="contacts__mapblock__text__item">
+                        <div class="contacts__mapblock__text__item__title big">Исходные данные</div>
+                        <ul class="contacts__mapblock__text__item__list">
+                            <li>количество проживающих - 4-5 чел.</li>
+                            <li>потребность в воде - 3 м³/ч</li>
+                        </ul>
+                    </div>
+                    <div class="contacts__mapblock__text__item">
+                        <div class="contacts__mapblock__text__item__title big">Задача</div>
+                        <ul class="contacts__mapblock__text__item__list">
+                            <li>глубина скважины - 113 м</li>
+                            <li>статический уровень воды - 16 м</li>
+                            <li>динамический уровень воды - 30 м</li>
+                            <li>дебит скважины - 3 м куб/ч</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="contacts__mapblock__map" id="contacts__mapblock__map"></div>
+            <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+            <script>
+                //Яндекс Карта
+                ymaps.ready(init);
+                var myMapAll;
+
+                function init() {
+                    myMapAll = new ymaps.Map("contacts__mapblock__map", {
+                        center: [55.725823, 49.189266],
+                        zoom: 15,
+                        controls: []
+                    });
+                    var myPlacemark_1 = new ymaps.Placemark([55.725823, 49.189266], {
+                        balloonContentHeader: "Название объекта",
+                        balloonContentBody: "<a target='blank' href='http://google.com'>Подробнее<a>",
+                        balloonContentFooter: "",
+                        hintContent: "Кликните для более подробной информации",
+                    },
+                    {
+                        // Необходимо указать данный тип макета.
+                        iconLayout: 'default#image',
+                        // Своё изображение иконки метки.
+                        iconImageHref: 'img/mapmarker.svg',
+                        // Размеры метки.
+                        iconImageSize: [24, 31],
+                    }
+                    );
+                    myMapAll.geoObjects.add(myPlacemark_1);
+                }
+                //END Яндекс Карта
+            </script>
+        </div>
+
+        <div class="onework__photos">
+            <h2 class="sec__title">Фото с места работ</h2>
+            <div class="onework__photos__items">
+                {% for el in range(11) %}
+                    <div class="onework__photos__item" style="background-image: url(img/ourwork-item-img.jpg);"></div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================================ -->
+<!-- ====================== END onework ============================= -->
+<!-- ================================================================ -->
+
+<!-- ================================================================ -->
+<!-- ================== solutionandcost ============================= -->
+<!-- ================================================================ -->
+<section class="solutionandcost sec white">
+    <div class="container">
+        <h2 class="sec__title">Решение и стоимость</h2>
+        <div class="editor solutionandcost__text">
+            <p>Район отличается глубоким залеганием водоносного известняка — от 80 м до 200 м (Клязьминско-Ассельский водоносный горизонт). Бурение более мелкой песчаной скважины может быть осложнено крупными камнями и валунами.</p>
+            <p>Производилось роторное бурение на известняк с промывкой глинистым раствором. Обсадка скважины стальной трубой 133 мм.</p>
+            <p>После вскрытия рабочего водоносного горизонта на глубине 90 м и бурения открытого ствола вода в скважине поднялась высоко, до 13 м.</p>
+            <p>Заметим, что в основном в Солнечногорском районе артезианские воды находятся под небольшим напором. Бурение заняло 4 дня. </p>
+            <p>Химический анализ воды показал превышения по мутности, цветности и растворенному железу.На основе этих результатов заказчик получил предложение от отдела водочистки по организации эффективной системы фильтрации воды.</p>
+                <p>Глубина скважины 113(м) Статический уровень 16 (м) Динамический уровень30 (м) Дебит скважины 3 (м³/ч). </p>
+        </div>
+        <div class="solutionandcost__price">Стоимость = 125.000 р</div>
+        <div class="solutionandcost__footer">
+            <div class="solutionandcost__footer__videoblock" style="background-image: url('img/reviews.jpeg');">
+                <div class="reviews__slider__item__video__play" style="background-image: url(img/play.svg);"></div>
+            </div>
+            <div class="solutionandcost__footer__formblock">
+                <div class="solutionandcost__footer__formblock__title">Оставьте заявку на бесплатную консультацию!</div>
+                <form action="" class="solutionandcost__footer__formblock__form" data-validate="formblock__form">
+                    <input name="phone" type="text" placeholder="Введите телефон">
+                    <input name="name" type="text" placeholder="Введите имя">
+                    <div class="formblock__form__politics">
+                        <label for="2" class="checkbox">
+                            <input data-form-politics-checkbox="" class="form__checkbox__politics" type="checkbox" id="2" checked="">
+                            <span class="checkbox__custom">
+                                <span class="checkbox__custom__circle"></span>
+                            </span>
+                        </label>
+                        <div class="formblock__form__politics__title">Оставляя заявку Вы соглашаетесь с <a href="">политикой конфинденциальности</a></div>
+                    </div>
+                    <button class="btn">Получить консультацию</button>
+                </form>
+                <img src="img/formblock.png" alt="" class="solutionandcost__footer__formblock__img">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================================ -->
+<!-- ============== END solutionandcost ============================= -->
+<!-- ================================================================ -->
+
+{% endblock %}

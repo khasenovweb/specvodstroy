@@ -1,6 +1,25 @@
 .anchors {
     background-color: #fff;
-    border-bottom: 1px solid #EFEFEF;;
+    border-bottom: 1px solid #efefef;
+    &.headhesive {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+
+        padding: 1.5rem 0;
+        z-index: 3;
+        transition: 0.2s;
+        transform: translateY(-100%);
+        z-index: 4;
+    }
+    &.headhesive--unstick {
+        transform: translateY(-100%);
+    }
+    &.headhesive--stick {
+        transform: translateY(50rem);
+        box-shadow: 0px 10px 20px rgba(99, 56, 162, 0.1);
+    }
 }
 .anchors__links {
     display: flex;
@@ -20,8 +39,7 @@
     }
 }
 
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
     .anchors {
         display: none;
     }

@@ -1,0 +1,87 @@
+.command {
+    padding-top: 54rem;
+    padding-bottom: 70rem;
+    background-color: #fafbfd;
+}
+.command__slider {
+    margin-top: 60rem;
+    button.owl-prev {
+        position: absolute;
+        left: -60rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    button.owl-next {
+        position: absolute;
+        right: -60rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+.command__slider__item {
+    background-color: #fff;
+}
+.command__slider__item__img {
+    width: 100%;
+    padding-bottom: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5rem;
+}
+
+.command__slider__item__text {
+    padding: 20rem;
+}
+.command__slider__item__name {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 130%;
+    color: @black;
+    text-align: center;
+}
+.command__slider__item__role {
+    font-size: 14rem;
+    color: @blue;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.command__slider__dots {
+    margin-top: 26rem;
+    display: flex;
+    justify-content: center;
+    button.owl-dot {
+        width: 8rem;
+        height: 8rem;
+        background-color: @blue;
+        border-radius: 100%;
+        border: none;
+        margin: 5rem;
+        cursor: pointer;
+        &.active {
+            background: radial-gradient(
+                    47.41% 82.95% at 51.46% -4.55%,
+                    rgba(255, 255, 255, 0.4) 0%,
+                    rgba(255, 255, 255, 0.4) 0.01%,
+                    rgba(255, 255, 255, 0) 100%
+                ),
+                #ff4c0c;
+        }
+    }
+}
+.command__btn {
+    margin: 0 auto;
+    margin-top: 30rem;
+    width: max-content;
+}
+
+@media screen and (max-width: 700px) {
+    .command {
+        padding-top: 40rem;
+        padding-bottom: 40rem;
+    }
+    .command__slider {
+        margin-top: 40rem;
+    }
+}

@@ -1,0 +1,128 @@
+{% set title = 'Главная' %}
+{% extends 'layouts/_main.html' %}
+{% block content %}
+
+
+<!-- ================================================================ -->
+<!-- ========================= contacts ============================= -->
+<!-- ================================================================ -->
+<section class="contacts sec blue">
+    <div class="container">
+        <h2 class="sec__title">Контакты</h2>
+        <ul class="hero__bredcrumbs" itemscope="bredcrumbs" itemtype="http://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a href="/" itemprop="item">
+                    <span itemprop="name">Главная</span>
+                </a>
+                <meta itemprop="position" content="1">
+            </li>
+            <span class="hero__bredcrumbs__separator">/</span>
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a href="/zally/banketnyj-zal-na-karbysheva/" itemprop="item">
+                    <span itemprop="name">Контакты</span>
+                </a>
+                <meta itemprop="position" content="2">
+            </li>
+        </ul>
+
+        <div class="contacts__mapblock">
+            <div class="contacts__mapblock__text">
+                <div class="contacts__mapblock__text__items">
+                    <div class="contacts__mapblock__text__item">
+                        <div class="contacts__mapblock__text__item__title big">Мы находимся по адресу:</div>
+                        <ul class="contacts__mapblock__text__item__list">
+                            <li>420029, РТ, г. Казань, ул.Журналистов, д. 62,  пом. 230 этаж 2</li>
+                        </ul>
+                    </div>
+                    <div class="contacts__mapblock__text__item">
+                        <div class="contacts__mapblock__text__item__title">Наш телефон</div>
+                        <ul class="contacts__mapblock__text__item__list">
+                            <li><a href="tel:+7 (843) 258-46-00">+7 (843) 258-46-00</a></li>
+                            <li><a href="tel:+7 (960) 048-46-00">+7 (960) 048-46-00</a></li>
+                            <li><a href="mailto:info@mosvodostroy.ru">info@mosvodostroy.ru</a></li>
+                        </ul>
+                    </div>
+                    <div class="contacts__mapblock__text__item">
+                        <div class="contacts__mapblock__text__item__title">Время работы</div>
+                        <ul class="contacts__mapblock__text__item__list">
+                            <li>с 9:00 до 19:00</li>
+                            <li>по будням и выходным</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about__left__socials">
+                    <a href="" class="about__left__social" data-lazy-bg="img/vk.svg" style="background-image: url(&quot;img/vk.svg&quot;);"></a>
+                    <a href="" class="about__left__social" data-lazy-bg="img/fb.svg" style="background-image: url(&quot;img/fb.svg&quot;);"></a>
+                    <a href="" class="about__left__social" data-lazy-bg="img/youtube.svg" style="background-image: url(&quot;img/youtube.svg&quot;);"></a>
+                    <a href="" class="about__left__social" data-lazy-bg="img/ig.svg" style="background-image: url(&quot;img/ig.svg&quot;);"></a>
+                    <a href="" class="about__left__social" data-lazy-bg="img/tt.svg" style="background-image: url(&quot;img/tt.svg&quot;);"></a>
+                </div>
+            </div>
+            <div class="contacts__mapblock__map" id="contacts__mapblock__map"></div>
+            <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+            <script>
+                //Яндекс Карта
+                ymaps.ready(init);
+                var myMapAll;
+
+                function init() {
+                    myMapAll = new ymaps.Map("contacts__mapblock__map", {
+                        center: [55.725823, 49.189266],
+                        zoom: 15,
+                        controls: []
+                    });
+                    var myPlacemark_1 = new ymaps.Placemark([55.725823, 49.189266], {
+                        balloonContentHeader: "Название объекта",
+                        balloonContentBody: "<a target='blank' href='http://google.com'>Подробнее<a>",
+                        balloonContentFooter: "",
+                        hintContent: "Кликните для более подробной информации",
+                    },
+                    {
+                        // Необходимо указать данный тип макета.
+                        iconLayout: 'default#image',
+                        // Своё изображение иконки метки.
+                        iconImageHref: 'img/mapmarker.svg',
+                        // Размеры метки.
+                        iconImageSize: [24, 31],
+                    }
+                    );
+                    myMapAll.geoObjects.add(myPlacemark_1);
+                }
+                //END Яндекс Карта
+            </script>
+        </div>
+        <div class="contacts__photos">
+            {% for el in range(4) %}
+            <div class="contacts__photo" style="background-image: url(img/contacts-photo.jpg);"></div>
+            {% endfor %}
+        </div>
+        <div class="contacts__requisites">
+            <h2 class="sec__title center">Реквезиты компании</h2>
+            <div class="contacts__requisites__main">
+                <div class="contacts__requisites__main__title">
+                    ООО «СпецВодСтрой»
+                </div>
+                <ul class="contacts__requisites__main__list">
+                    <li><strong>Директор:</strong> Егоров Евгений Владимирович</li>
+                    <li><strong>Юридический адрес:</strong>420047, РТ, г. Казань, ул. Ермоловой, д. 23.</li>
+                    <li><strong>ИНН:</strong>1661047458</li>
+                    <li><strong>КПП:</strong>166101001</li>
+                    <li><strong>ОГРН:</strong>1161690050950</li>
+                    <li><strong>Р/с:</strong>40702810007500001213</li>
+                    <li><strong>Название банка:</strong>ТОЧКА ПАО БАНКА "ФК ОТКРЫТИЕ" МОСКВА </li>
+                    <li><strong>К/с:</strong>30101810845250000999</li>
+                    <li><strong>БИК:</strong>044525999</li>
+                    <li><strong>Электронный адрес:</strong>bur-kazan@mail.ru</li>
+                    <li><strong>Сайт:</strong>bur-kazan.ru</li>
+                    <li><strong>Контактный телефон:</strong>8(843) 258-66-81</li>
+                </ul>
+            </div>
+            <a href="/" class="btn contacts__requisites__partnercarddownload">Скачать карту партнёра</a>
+        </div>
+    </div>
+</section>
+<!-- ================================================================ -->
+<!-- ===================== END contacts ============================= -->
+<!-- ================================================================ -->
+
+{% endblock %}

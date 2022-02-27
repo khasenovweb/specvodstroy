@@ -1,0 +1,486 @@
+{% set title = 'Главная' %}
+{% extends 'layouts/_main.html' %}
+{% block content %}
+
+<!-- ================================================================ -->
+<!-- ============================= hero ============================= -->
+<!-- ================================================================ -->
+<section class="hero" style="background-image: url(img/hero-5.jpg);">
+    <div class="container">
+        <div class="hero__content">
+            <div class="hero__text">
+                <h1 class="hero__title">Установка септика <span class="color">в Казани</span></h1>
+                <p class="hero__desc">Без обустройства Вы не сможете полноценно пользоваться пробуренной водозаборной колонной</p>
+                <ul class="hero__bredcrumbs" itemscope="bredcrumbs" itemtype="http://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a href="/" itemprop="item">
+                            <span itemprop="name">Главная</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <span class="hero__bredcrumbs__separator">/</span>
+                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a href="/zally/banketnyj-zal-na-karbysheva/" itemprop="item">
+                            <span itemprop="name">Установка септика</span>
+                        </a>
+                        <meta itemprop="position" content="2">
+                    </li>
+                </ul>
+            </div>
+            <div class="hero__form">
+                <div class="parallax">
+                    <div class="parallax__scene" data-parallax-scene>
+                        <div class="parallax__img" style="background-image: url(img/hero-form-parallax-1.png);" data-depth="0.5"></div>
+                    </div>
+                </div>
+                <div class="parallax">
+                    <div class="parallax__scene" data-parallax-scene>
+                        <div class="parallax__img" style="background-image: url(img/hero-form-parallax-6.png);" data-depth="0.2"></div>
+                    </div>
+                </div>
+                <div class="hero__form__title">Оставьте заявку на бесплатную консультацию!</div>
+                <form action="" data-validate="hero_form">
+                    <div class="hero__form__input">
+                        <input name="phone" type="text" placeholder="Введите телефон">
+                    </div>
+                    <div class="hero__form__input">
+                        <input name="name" type="text" placeholder="Введите имя">
+                    </div>
+                    <div class="hero__form__input__politics">
+                        <label for="1" class="checkbox">
+                            <input data-form-politics-checkbox class="form__checkbox__politics" type="checkbox" id="1" checked>
+                            <span class="checkbox__custom">
+                                <span class="checkbox__custom__circle"></span>
+                            </span>
+                        </label>
+                        <div class="hero__form__input__politics__title">Оставляя заявку Вы соглашаетесь с <a href="">политикой конфинденциальности</a></div>
+                    </div>
+                    <button class="btn">Получить консультацию</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================================ -->
+<!-- ========================= END hero ============================= -->
+<!-- ================================================================ -->
+
+{% include 'partials/_anchors.html' %}
+
+<!-- ================================================================ -->
+<!-- =========================== preims ============================= -->
+<!-- ================================================================ -->
+<section class="preims">
+    <div class="container">
+        <div class="preims__content">
+            <div class="preims__text">
+                <h2 class="sec__title">Наши преимущества</h2>
+                <ul class="preims__items">
+                    <!-- preims__item -->
+                    <li class="preims__item">
+                        <div class="preims__item__icon" style="background-image: url(img/preims-1.svg);"></div>
+                        <div class="preims__item__text">
+                            <div class="preims__item__title">Команда профессионалов</div>
+                            <div class="preims__item__desc">Наши специалисты успешно занимаются бурением скважин  на воду более 15 лет и имеют только положительные отзывы.</div>
+                        </div>
+                    </li>
+                    <!-- END preims__item -->
+                    <!-- preims__item -->
+                    <li class="preims__item">
+                        <div class="preims__item__icon" style="background-image: url(img/preims-1.svg);"></div>
+                        <div class="preims__item__text">
+                            <div class="preims__item__title">Команда профессионалов</div>
+                            <div class="preims__item__desc">Наши специалисты успешно занимаются бурением скважин  на воду более 15 лет и имеют только положительные отзывы.</div>
+                        </div>
+                    </li>
+                    <!-- END preims__item -->
+                    <!-- preims__item -->
+                    <li class="preims__item">
+                        <div class="preims__item__icon" style="background-image: url(img/preims-1.svg);"></div>
+                        <div class="preims__item__text">
+                            <div class="preims__item__title">Команда профессионалов</div>
+                            <div class="preims__item__desc">Наши специалисты успешно занимаются бурением скважин  на воду более 15 лет и имеют только положительные отзывы.</div>
+                        </div>
+                    </li>
+                    <!-- END preims__item -->
+                    <!-- preims__item -->
+                    <li class="preims__item">
+                        <div class="preims__item__icon" style="background-image: url(img/preims-1.svg);"></div>
+                        <div class="preims__item__text">
+                            <div class="preims__item__title">Команда профессионалов</div>
+                            <div class="preims__item__desc">Наши специалисты успешно занимаются бурением скважин  на воду более 15 лет и имеют только положительные отзывы.</div>
+                        </div>
+                    </li>
+                    <!-- END preims__item -->
+                </ul>
+            </div>
+            <div class="preims__img__wrapper">
+                <div class="preims__img" style="background-image: url(img/preims-big.png)">
+                    <div class="parallax">
+                        <div class="parallax__scene" data-parallax-scene>
+                            <div class="parallax__img" style="background-image: url(img/preims-parallax.png);" data-depth="0.5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================================ -->
+<!-- ======================= END preims ============================= -->
+<!-- ================================================================ -->
+
+{% include 'partials/_quizblock.html' %}
+
+<!-- ================================================================ -->
+<!-- =========================== about ============================== -->
+<!-- ================================================================ -->
+<section class="about">
+    <div class="container">
+        <div class="about__content">
+            <div class="about__left__video__wrapper">
+                <div class="about__left__video__parallax__wrapper">
+                    <div class="about__left__video__parallax__scene" data-parallax-scene>
+                        <div class="about__left__video__parallax__img" data-lazy-bg="img/about-parallax-1.png" data-depth="0.7"></div>
+                    </div>
+                </div>
+                <div class="about__left__video__parallax__wrapper">
+                    <div class="about__left__video__parallax__scene" data-parallax-scene>
+                        <div class="about__left__video__parallax__img" data-lazy-bg="img/about-parallax-2.png" data-depth="1"></div>
+                    </div>
+                </div>
+                <div class="about__left__video" data-lazy-bg="img/about.jpeg">
+                    <img class="about__left__video__play" src="img/play.svg" alt="">
+                </div>
+            </div>
+            
+            <div class="about__left__text editor">
+                <p>
+                    Группа компаний "СпецВодСтрой" занимается частными и промышленными буровыми работами больше 15 лет. Наши буровые мастера и гидрогеологи добиваются бесперебойной подачи чистой воды даже в сложных гидрогеологических условиях.  <br> <br>
+                    Это сложный инженерный и гидротехнический процесс. Малейший просчет в этом деле грозит пагубными последствиями для здоровья и экологии. Поэтому такие работы стоит доверять только проверенным компаниям, которые заведут чистую воду в дом, не разрушив ландшафт.
+                </p>
+            </div>
+            <div class="about__left__socials">
+                <a href="" class="about__left__social" data-lazy-bg="img/vk.svg"></a>
+                <a href="" class="about__left__social" data-lazy-bg="img/fb.svg"></a>
+                <a href="" class="about__left__social" data-lazy-bg="img/youtube.svg"></a>
+                <a href="" class="about__left__social" data-lazy-bg="img/ig.svg"></a>
+                <a href="" class="about__left__social" data-lazy-bg="img/tt.svg"></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================================ -->
+<!-- ======================= END about ============================== -->
+<!-- ================================================================ -->
+
+{% include 'partials/_sertificates.html' %}
+
+<!-- ================================================================ -->
+<!-- ===================== canvasblock ============================== -->
+<!-- ================================================================ -->
+<section class="sec white canvasblock">
+    <canvas class="canvasblock__canvas" id="canvasblock__canvas"></canvas>
+    <div class="container">
+        <h2 class="sec__title center">Преимущества автономной канализации</h2>
+        <div class="canvasblock__main">
+            <div class="canvasblock__main__img">
+                <img src="img/canvasblock-2.png" alt="">
+                <div class="canvasblock__main__img__circles">
+                    <div class="canvasblock__main__img__circle" style="left: 39%;top: 30%;"></div>
+                    <div class="canvasblock__main__img__circle" style="left: 34%;top: 38%;"></div>
+                    <div class="canvasblock__main__img__circle" style="left: 45%;top: 61%;"></div>
+                    <div class="canvasblock__main__img__circle" style="left: 46%;top: 89%;"></div>
+                    <div class="canvasblock__main__img__circle" style="left: 78%;top: 36%;"></div>
+                    <div class="canvasblock__main__img__circle" style="left: 67%;top: 56%;"></div>
+                    <div class="canvasblock__main__img__circle" style="left: 58%;top: 72%;"></div>
+                    <div class="canvasblock__main__img__circle" style="left: 74%;top: 72%;"></div>
+                </div>
+            </div>
+            <div class="canvasblock__main__items">
+                <div class="canvasblock__main__items__col">
+                    {% for el in range(4) %}
+                    <div class="canvasblock__main__item">
+                        <div class="canvasblock__main__item__circle__from"></div>
+                        <div class="canvasblock__main__item__title">
+                            <span class="canvasblock__main__item__title__circle"></span>
+                            Заголовок описания
+                        </div>
+                        <div class="canvasblock__main__item__desc">
+                            Олодец, выкопанный без взрывных веществ с предельным углублением до 5 м; 
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="canvasblock__main__items__col">
+                    {% for el in range(4) %}
+                    <div class="canvasblock__main__item">
+                        <div class="canvasblock__main__item__circle__from left"></div>
+                        <div class="canvasblock__main__item__title">
+                            <span class="canvasblock__main__item__title__circle"></span>
+                            Заголовок описания
+                        </div>
+                        <div class="canvasblock__main__item__desc">
+                            Олодец, выкопанный без взрывных веществ с предельным углублением до 5 м; 
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================================ -->
+<!-- ================= END canvasblock ============================== -->
+<!-- ================================================================ -->
+
+<!-- ================================================================ -->
+<!-- ======================== populars ============================== -->
+<!-- ================================================================ -->
+<section class="populars">
+    <div class="container">
+        <div class="populars__content">
+            <h2 class="sec__title center">Популярные модели</h2>
+            <p class="sec__desc center">Автономные канализации Септик из бетонных колец Септики</p>
+            <div class="populars__slider__wrapper">
+                <div class="populars__slider owl-carousel">
+                    <!-- populars__slider__item -->
+                    <div class="populars__slider__item">
+                        <div class="populars__slider__item__img" data-lazy-bg="img/populars-1.png"></div>
+                        <div class="populars__slider__item__title">Юнилос Астра 3</div>
+                        <ul class="populars__slider__item__list">
+                            <li>Кол-во условных человек: 4</li>
+                            <li>Залповый сброс: 230 </li>
+                            <li>Объем переработки, м3/сут: 0.8 </li>
+                        </ul>
+                        <div class="populars__slider__item__prices">
+                            <div class="populars__slider__item__price">
+                                <div class="populars__slider__item__price__label">Цена изделия: </div>
+                                <div class="populars__slider__item__price__value">30 000 руб</div>
+                            </div>
+                            <div class="populars__slider__item__price">
+                                <div class="populars__slider__item__price__label">Цена изделия: </div>
+                                <div class="populars__slider__item__price__value">30 000 руб</div>
+                            </div>
+                        </div>
+                        <button class="btn" data-modal-show="2">Заказать</button>
+                    </div>
+                    <!-- END populars__slider__item -->
+                    <!-- populars__slider__item -->
+                    <div class="populars__slider__item">
+                        <div class="populars__slider__item__img" data-lazy-bg="img/populars-1.png"></div>
+                        <div class="populars__slider__item__title">Юнилос Астра 3</div>
+                        <ul class="populars__slider__item__list">
+                            <li>Кол-во условных человек: 4</li>
+                            <li>Залповый сброс: 230 </li>
+                            <li>Объем переработки, м3/сут: 0.8 </li>
+                        </ul>
+                        <div class="populars__slider__item__prices">
+                            <div class="populars__slider__item__price">
+                                <div class="populars__slider__item__price__label">Цена изделия: </div>
+                                <div class="populars__slider__item__price__value">30 000 руб</div>
+                            </div>
+                            <div class="populars__slider__item__price">
+                                <div class="populars__slider__item__price__label">Цена изделия: </div>
+                                <div class="populars__slider__item__price__value">30 000 руб</div>
+                            </div>
+                        </div>
+                        <button class="btn" data-modal-show="2">Заказать</button>
+                    </div>
+                    <!-- END populars__slider__item -->
+                    <!-- populars__slider__item -->
+                    <div class="populars__slider__item">
+                        <div class="populars__slider__item__img" data-lazy-bg="img/populars-1.png"></div>
+                        <div class="populars__slider__item__title">Юнилос Астра 3</div>
+                        <ul class="populars__slider__item__list">
+                            <li>Кол-во условных человек: 4</li>
+                            <li>Залповый сброс: 230 </li>
+                            <li>Объем переработки, м3/сут: 0.8 </li>
+                        </ul>
+                        <div class="populars__slider__item__prices">
+                            <div class="populars__slider__item__price">
+                                <div class="populars__slider__item__price__label">Цена изделия: </div>
+                                <div class="populars__slider__item__price__value">30 000 руб</div>
+                            </div>
+                            <div class="populars__slider__item__price">
+                                <div class="populars__slider__item__price__label">Цена изделия: </div>
+                                <div class="populars__slider__item__price__value">30 000 руб</div>
+                            </div>
+                        </div>
+                        <button class="btn" data-modal-show="2">Заказать</button>
+                    </div>
+                    <!-- END populars__slider__item -->
+                    <!-- populars__slider__item -->
+                    <div class="populars__slider__item">
+                        <div class="populars__slider__item__img" data-lazy-bg="img/populars-1.png"></div>
+                        <div class="populars__slider__item__title">Юнилос Астра 3</div>
+                        <ul class="populars__slider__item__list">
+                            <li>Кол-во условных человек: 4</li>
+                            <li>Залповый сброс: 230 </li>
+                            <li>Объем переработки, м3/сут: 0.8 </li>
+                        </ul>
+                        <div class="populars__slider__item__prices">
+                            <div class="populars__slider__item__price">
+                                <div class="populars__slider__item__price__label">Цена изделия: </div>
+                                <div class="populars__slider__item__price__value">30 000 руб</div>
+                            </div>
+                            <div class="populars__slider__item__price">
+                                <div class="populars__slider__item__price__label">Цена изделия: </div>
+                                <div class="populars__slider__item__price__value">30 000 руб</div>
+                            </div>
+                        </div>
+                        <button class="btn" data-modal-show="2">Заказать</button>
+                    </div>
+                    <!-- END populars__slider__item -->
+                </div>
+                <div class="populars__slider__dots"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================================ -->
+<!-- ==================== END populars ============================== -->
+<!-- ================================================================ -->
+
+{% include 'partials/_promotion.html' %}
+
+<!-- ================================================================ -->
+<!-- ================= additionalservices =========================== -->
+<!-- ================================================================ -->
+<section class="additionalservices">
+    <div class="container">
+        <div class="additionalservices__content">
+            <h2 class="sec__title">Стоимость и виды септиков</h2>
+            <div class="additionalservices__items">
+                <!-- additionalservices__item -->
+                <div class="additionalservices__item">
+                    <div class="additionalservices__item__title">1. Услуга по бурению и обслуживанию</div>
+                    <div class="additionalservices__item__price">55 000 руб.</div>
+                    <button class="btn additionalservices__item__btn">Подробнее</button>
+                </div>
+                <!-- END additionalservices__item -->
+                <!-- additionalservices__item -->
+                <div class="additionalservices__item">
+                    <div class="additionalservices__item__title">2. Услуга по бурению и обслуживанию скважины</div>
+                    <div class="additionalservices__item__price">55 000 руб.</div>
+                    <button class="btn additionalservices__item__btn">Подробнее</button>
+                </div>
+                <!-- END additionalservices__item -->
+                <!-- additionalservices__item -->
+                <div class="additionalservices__item">
+                    <div class="additionalservices__item__title">3. Услуга по бурению</div>
+                    <div class="additionalservices__item__price">55 000 руб.</div>
+                    <button class="btn additionalservices__item__btn">Подробнее</button>
+                </div>
+                <!-- END additionalservices__item -->
+                <!-- additionalservices__item -->
+                <div class="additionalservices__item">
+                    <div class="additionalservices__item__title">4. Услуга по обслуживанию скважины</div>
+                    <div class="additionalservices__item__price">55 000 руб.</div>
+                    <button class="btn additionalservices__item__btn">Подробнее</button>
+                </div>
+                <!-- END additionalservices__item -->
+                <!-- additionalservices__item -->
+                <div class="additionalservices__item">
+                    <div class="additionalservices__item__title">5. Услуга по бурению</div>
+                    <div class="additionalservices__item__price">55 000 руб.</div>
+                    <button class="btn additionalservices__item__btn">Подробнее</button>
+                </div>
+                <!-- END additionalservices__item -->
+                <!-- additionalservices__item -->
+                <div class="additionalservices__item">
+                    <div class="additionalservices__item__title">6. Услуга по бурению и обслуживанию </div>
+                    <div class="additionalservices__item__price">55 000 руб.</div>
+                    <button class="btn additionalservices__item__btn">Подробнее</button>
+                </div>
+                <!-- END additionalservices__item -->
+                <!-- additionalservices__item -->
+                <div class="additionalservices__item">
+                    <div class="additionalservices__item__title">7. Услуга по бурению и обслуживанию скважины </div>
+                    <div class="additionalservices__item__price">55 000 руб.</div>
+                    <button class="btn additionalservices__item__btn">Подробнее</button>
+                </div>
+                <!-- END additionalservices__item -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================================ -->
+<!-- ============= END additionalservices =========================== -->
+<!-- ================================================================ -->
+
+<!-- ================================================================ -->
+<!-- ==================== drillingmethods =========================== -->
+<!-- ================================================================ -->
+<section class="drillingmethods">
+    <div class="container">
+        <div class="drillingmethods__main">
+            <div class="drillingmethods__main__img__wrapper">
+                <img src="img/drillingmethods-img.png" alt="" class="drillingmethods__main__img">
+            </div>
+            <div class="drillingmethods__main__text">
+                <h2 class="sec__title">Этапы обустройства</h2>
+                <p class="sec__desc">Мастера "СпецВодСтрой" работают только на продвинутой современной технике.  Например, на малогабаритных установках, с помощью которых можно пробурить скважину для воды  большой глубины без заезда тяжелой техники.  Также в работе компания применяет бурение скважин:</p>
+                <div class="drillingmethods__items">
+                    <!-- drillingmethods__item -->
+                    <div class="drillingmethods__item">
+                        <div class="drillingmethods__item__icon" style="background-image: url(img/drillingmethods-icon-1.png);"></div>
+                        <div class="drillingmethods__item__title">Ударно-канатное методом  дробления грунта  остроконечным долотом.</div>
+                    </div>
+                    <!-- END drillingmethods__item -->
+                    <!-- drillingmethods__item -->
+                    <div class="drillingmethods__item">
+                        <div class="drillingmethods__item__icon" style="background-image: url(img/drillingmethods-icon-4.png);"></div>
+                        <div class="drillingmethods__item__title">Вращательное пневмоударным механизмом.</div>
+                    </div>
+                    <!-- END drillingmethods__item -->
+                    <!-- drillingmethods__item -->
+                    <div class="drillingmethods__item">
+                        <div class="drillingmethods__item__icon" style="background-image: url(img/drillingmethods-icon-2.png);"></div>
+                        <div class="drillingmethods__item__title">Шнековое для рыхлых почв.</div>
+                    </div>
+                    <!-- END drillingmethods__item -->
+                    <!-- drillingmethods__item -->
+                    <div class="drillingmethods__item">
+                        <div class="drillingmethods__item__icon" style="background-image: url(img/drillingmethods-icon-5.png);"></div>
+                        <div class="drillingmethods__item__title">Колонковое забойным инструментом быстровращательным способом.</div>
+                    </div>
+                    <!-- END drillingmethods__item -->
+                    <!-- drillingmethods__item -->
+                    <div class="drillingmethods__item">
+                        <div class="drillingmethods__item__icon" style="background-image: url(img/drillingmethods-icon-3.png);"></div>
+                        <div class="drillingmethods__item__title">Шарошечное с использованием шарошечного долота.</div>
+                    </div>
+                    <!-- END drillingmethods__item -->
+                </div>
+            </div>
+        </div>
+        <div class="drillingmethods__alertblock">
+            <div class="drillingmethods__alert">
+                <div class="drillingmethods__alert__icon" style="background-image: url(img/drillingmethods__alert.svg);"></div>
+                <div class="drillingmethods__alert__text__wrapper">
+                    <div class="drillingmethods__alert__title">Чтобы исключить вероятность капремонта, необходимо вовремя выполнять текущие ремонтные работы. К нему относятся: </div>
+                    <div class="drillingmethods__alert__text">
+                        1. Очистка обсадной трубы насосом с высоким давлением; <br>
+                        2. Прокачка вибрационным насосом; <br>
+                        3. Прочистка желонкой. <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================================ -->
+<!-- ================ END drillingmethods =========================== -->
+<!-- ================================================================ -->
+
+{% include 'partials/_formblock.html' %}
+{% include 'partials/_command.html' %}
+{% include 'partials/_clients.html' %}
+{% include 'partials/_worksmap.html' %}
+{% include 'partials/_reviews.html' %}
+{% include 'partials/_faq.html' %}
+{% include 'partials/_faq__quizblock.html' %}
+
+{% endblock %}

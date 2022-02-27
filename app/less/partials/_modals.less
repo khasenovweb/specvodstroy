@@ -1,0 +1,178 @@
+@main: #8A3BFC;
+
+.modal__wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 100rem;
+}
+
+.modal {
+    background-color: #fff;
+    padding: 30rem;
+    border-radius: 10rem;
+    max-width: 420rem;
+    position: relative;
+    .modal__success {
+        display: none;
+    }
+    .modal__error {
+        display: none;
+    }
+    &.success {
+        .modal__content {
+            display: none;
+        }
+        .modal__success {
+            display: block;
+        }
+        .modal__error {
+            display: none;
+        }
+    }
+    &.error {
+        .modal__content {
+            display: none;
+        }
+        .modal__success {
+            display: none;
+        }
+        .modal__error {
+            display: block;
+        }
+    }
+}
+
+.modal__title {
+    font-size: 22rem;
+    font-weight: bold;
+    line-height: 130%;
+}
+
+.modal__desc {
+    font-size: 14rem;
+    margin-top: 14rem;
+    color: #C4C4C4;
+}
+
+.modal__form {
+    margin-top: 14rem;
+    input {
+        margin-top: 10rem;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    .btn {
+        margin-top: 10rem;
+    }
+}
+
+.modal__form__politics {
+    display: flex;
+    align-items: flex-start;
+    grid-column: span 3;
+    margin-top: 14rem;
+    .checkbox {
+        margin-top: 2rem;
+        margin-right: 14rem;
+    }
+}
+
+.modal__form__politics__title {
+    font-size: 12rem;
+    color: #939393;
+    a {
+        color: #939393;
+        text-decoration: none;
+    }
+}
+
+
+.modal__close {
+    width: 16rem;
+    height: 16rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url(../img/modal-close.svg);
+    position: absolute;
+    top: -20rem;
+    right: -20rem;
+    cursor: pointer;
+}
+
+.body_hidden {
+    overflow-y: hidden;
+}
+
+[data-modal] {
+    display: none;
+    opacity: 0;
+    transition: 0.3s;
+    overflow-y: auto;
+    padding-bottom: 100rem;
+    .modal {
+        transform:  scale(0.97);
+        transition: 0.3s;
+        
+    }
+    &.active {
+        opacity: 1;
+        .modal {
+            transform:  scale(1);
+        }
+        
+    }
+}
+
+.modal__product__image {
+    width: 150rem;
+    height: 150rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 20rem;
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+    .modal__title {
+        text-align: center;
+        font-size: 18rem;
+    }
+    .modal {
+        padding: 30rem 15rem;
+    }
+    .modal__desc {
+        text-align: center;
+    }
+    .modal__form .btn {
+        width: 100%;
+    }
+}
+
+
+
+@media screen and (max-width: 450px) {
+    .modal {
+        max-width: 90%;
+    }
+    .modal__close {
+        right: 0;
+        top: -30rem;
+    }
+    // .modal__title {
+    //     font-size: 26rem;
+    // }
+    
+}

@@ -51,28 +51,7 @@
 <!-- ========================= END hero ============================= -->
 <!-- ================================================================ -->
 
-<!-- ================================================================ -->
-<!-- ========================== anchors ============================= -->
-<!-- ================================================================ -->
-<section class="anchors">
-    <div class="container">
-        <div class="anchors__content">
-            <ul class="anchors__links">
-                <li><a href="">О компании</a></li>
-                <li><a href="">Акции</a></li>
-                <li><a href="">На что бурим</a></li>
-                <li><a href="">Способы бурения</a></li>
-                <li><a href="">Этапы работ</a></li>
-                <li><a href="">Наша команда</a></li>
-                <li><a href="">Выполненые работы</a></li>
-                <li><a href="">Отзывы</a></li>
-            </ul>
-        </div>
-    </div>
-</section>
-<!-- ================================================================ -->
-<!-- ====================== END anchors ============================= -->
-<!-- ================================================================ -->
+{% include 'partials/_anchors.html' %}
 
 <!-- ================================================================ -->
 <!-- =========================== preims ============================= -->
@@ -137,27 +116,7 @@
 <!-- ======================= END preims ============================= -->
 <!-- ================================================================ -->
 
-
-<!-- ================================================================ -->
-<!-- ======================= quizblock ============================== -->
-<!-- ================================================================ -->
-<section class="quizblock">
-    <div class="container">
-        <div class="quizblock__content">
-            <div class="quizblock__content__text">
-                <div class="quizblock__content__title">Ответьте на несколько вопросов</div>
-                <div class="quizblock__content__desc">и мы подберем вариант скважины на воду под Ваши нужны! </div>
-            </div>
-            <button class="btn btn-icon">
-                Получить выгодное предложение
-                <div class="btn-icon__icon" style="background-image: url(img/btn-icon-1.png);"></div>
-            </button>
-        </div>
-    </div>
-</section>
-<!-- ================================================================ -->
-<!-- =================== END quizblock ============================== -->
-<!-- ================================================================ -->
+{% include 'partials/_quizblock.html' %}
 
 <!-- ================================================================ -->
 <!-- =========================== about ============================== -->
@@ -202,67 +161,8 @@
 <!-- ======================= END about ============================== -->
 <!-- ================================================================ -->
 
-<!-- ================================================================ -->
-<!-- ==================== sertificates ============================== -->
-<!-- ================================================================ -->
-<section class="sertificates">
-    <div class="container">
-        <div class="sertificates__content">
-            <h2 class="sec__title center">Наши свидельства и сертификаты</h2>
-            <div class="sertificates__slider__wrapper">
-                <div class="sertificates__slider owl-carousel">
-                    <img data-lazy-src="img/sertificate.jpeg" alt="">
-                    <img data-lazy-src="img/sertificate.jpeg" alt="">
-                    <img data-lazy-src="img/sertificate.jpeg" alt="">
-                    <img data-lazy-src="img/sertificate.jpeg" alt="">
-                    <img data-lazy-src="img/sertificate.jpeg" alt="">
-                </div>
-                <div class="sertificates__slider__dots"></div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ================================================================ -->
-<!-- ================ END sertificates ============================== -->
-<!-- ================================================================ -->
-
-<!-- ================================================================ -->
-<!-- ======================= promotion ============================== -->
-<!-- ================================================================ -->
-<section class="promotion" id="promotion" data-lazy-bg="img/promotion-bg.jpeg">
-    <div class="container">
-        <div class="promotion__content__wrapper">
-            <div class="promotion__content__wrapper__parallax">
-                <div class="promotion__content__wrapper__parallax__scene" data-parallax-scene>
-                    <div class="promotion__content__wrapper__parallax__img" data-lazy-bg="img/promotion-parallax-1.png" data-depth="0.5"></div>
-                </div>
-            </div>
-            <div class="promotion__content__wrapper__parallax">
-                <div class="promotion__content__wrapper__parallax__scene" data-parallax-scene>
-                    <div class="promotion__content__wrapper__parallax__img" data-lazy-bg="img/hero-form-parallax-2.png" data-depth="1"></div>
-                </div>
-            </div>
-            <div class="promotion__content__wrapper__parallax">
-                <div class="promotion__content__wrapper__parallax__scene" data-parallax-scene>
-                    <div class="promotion__content__wrapper__parallax__img" data-lazy-bg="img/promotion-parallax-3.png" data-depth="0.3"></div>
-                </div>
-            </div>
-            <div class="promotion__content">
-                <div class="promotion__content__text">
-                    <div class="promotion__content__text__triangle"></div>
-                    <div class="promotion__content__label">Акция месяца</div>
-                    <div class="promotion__content__title">Глубина больше - цена меньше</div>
-                    <div class="promotion__content__desc">Чем больше метров мы бурим, тем меньше стоимость за метр бурения</div>
-                    <button class="btn" data-modal-show="1">Уточнить у менеджера</button>
-                </div>
-                <div class="promotion__content__img" data-lazy-bg="img/promotion-img.jpeg"></div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ================================================================ -->
-<!-- =================== END promotion ============================== -->
-<!-- ================================================================ -->
+{% include 'partials/_sertificates.html' %}
+{% include 'partials/_promotion.html' %}
 
 <!-- ================================================================ -->
 <!-- ======================= typewells ============================== -->
@@ -401,7 +301,7 @@
     <div class="container">
         <div class="drillingmethods__main">
             <div class="drillingmethods__main__img__wrapper">
-                <div class="drillingmethods__main__img" style="background-image: url(img/drillingmethods-img.png);"></div>
+                <img src="img/drillingmethods-img.png" alt="" class="drillingmethods__main__img">
             </div>
             <div class="drillingmethods__main__text">
                 <h2 class="sec__title">Способы бурения</h2>
@@ -546,36 +446,14 @@
 <!-- ======================= END etaps ============================== -->
 <!-- ================================================================ -->
 
+{% include 'partials/_formblock.html' %}
+{% include 'partials/_command.html' %}
+{% include 'partials/_clients.html' %}
+{% include 'partials/_worksmap.html' %}
+{% include 'partials/_reviews.html' %}
+{% include 'partials/_faq.html' %}
+{% include 'partials/_faq__quizblock.html' %}
 
-<!-- ================================================================ -->
-<!-- ======================= formblock ============================== -->
-<!-- ================================================================ -->
-<section class="formblock">
-    <div class="container">
-        <div class="formblock__content">
-            <h2 class="sec__title">Выезд инженера на объект</h2>
-            <p class="sec__desc">Оставьте заявку чтобы вызвать инженера на ваш объект</p>
-            <form class="formblock__form" data-validate="formblock__form">
-                <input name="name" type="text" placeholder="Введите имя">
-                <input name="phone" type="text" placeholder="Введите телефон">
-                <input name="datetime" type="text" placeholder="Дата и время">
-                <div class="formblock__form__politics">
-                    <label for="2" class="checkbox">
-                        <input data-form-politics-checkbox="" class="form__checkbox__politics" type="checkbox" id="2" checked="">
-                        <span class="checkbox__custom">
-                            <span class="checkbox__custom__circle"></span>
-                        </span>
-                    </label>
-                    <div class="formblock__form__politics__title">Оставляя заявку Вы соглашаетесь с <a href="">политикой конфинденциальности</a></div>
-                </div>
-                <button class="btn">Заказать выезд инженера</button>
-            </form>
-            <img src="img/formblock.png" alt="" class="formblock__img">
-        </div>
-    </div>
-</section>
-<!-- ================================================================ -->
-<!-- =================== END formblock ============================== -->
-<!-- ================================================================ -->
+
 
 {% endblock %}

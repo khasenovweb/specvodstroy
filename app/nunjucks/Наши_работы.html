@@ -1,0 +1,109 @@
+{% set title = 'Главная' %}
+{% extends 'layouts/_main.html' %}
+{% block content %}
+
+<!-- ================================================================ -->
+<!-- ========================== ourwork ============================= -->
+<!-- ================================================================ -->
+<section class="ourwork sec blue">
+    <div class="container">
+        <h2 class="sec__title">Наши работы</h2>
+        <ul class="hero__bredcrumbs" itemscope="bredcrumbs" itemtype="http://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a href="/" itemprop="item">
+                    <span itemprop="name">Главная</span>
+                </a>
+                <meta itemprop="position" content="1">
+            </li>
+            <span class="hero__bredcrumbs__separator">/</span>
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a href="/zally/banketnyj-zal-na-karbysheva/" itemprop="item">
+                    <span itemprop="name">Наши работы</span>
+                </a>
+                <meta itemprop="position" content="2">
+            </li>
+        </ul>
+        <div class="ourwork__categories">
+            <a href="" class="ourwork__category active">
+                <div class="ourwork__category__img" style="background-image: url(img/ourwork-category.png);"></div>
+                <div class="ourwork__category__title">
+                    Бурениеи обустройство скважин
+                </div>
+            </a>
+            {% for el in range(3) %}
+            <a href="" class="ourwork__category">
+                <div class="ourwork__category__img" style="background-image: url(img/ourwork-category.png);"></div>
+                <div class="ourwork__category__title">
+                    Бурениеи обустройство скважин
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <div class="ourwork__sort">
+            <svg class="ourwork__sort__arrow" width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.63298 3.60241C2.83094 3.81671 3.16957 3.81671 3.36753 3.60241L5.68907 1.08928C5.9849 0.769035 5.75776 0.25 5.32179 0.25H0.678722C0.242756 0.25 0.0156208 0.769035 0.311446 1.08928L2.63298 3.60241Z" fill="#315283"/>
+            </svg>                
+            <select name="" id="">
+                <option value="">Сортировать по имени</option>
+            </select>
+        </div>
+        <div class="ourwork__items">
+            {% for el in range(12) %}
+            <div class="ourwork__item">
+                <div class="ourwork__item__img" style="background-image: url(img/ourwork-item-img.jpg);"></div>
+                <div class="ourwork__item__text">
+                    <div class="ourwork__item__title">Скважина с адаптером в д. Дулово</div>
+                    <div class="ourwork__item__price">Цена: 125 тыс</div>
+                    <a href="" class="btn ourwork__item__btn">Смотреть</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="ourwork__pagiantion">
+            <a href="" class="ourwork__pagiantion__arrow">
+                <svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.13656 7.16791L4.13659 7.16793L4.1406 7.16388L10.1891 1.05122C10.3812 0.857149 10.6934 0.853005 10.8905 1.04191L12.9146 2.98168C13.1174 3.17597 13.1204 3.49907 12.9213 3.69713L13.274 4.05158L12.9213 3.69713L7.15248 9.43664C6.56308 10.023 6.56308 10.977 7.15248 11.5634L12.9323 17.3137C13.1292 17.5097 13.1286 17.8286 12.931 18.0239L10.9793 19.9518C10.7849 20.1438 10.4723 20.1442 10.2774 19.9527L1.07423 10.9061C0.875244 10.7105 0.874851 10.3898 1.07336 10.1938L4.13656 7.16791Z" fill="#315283"/>
+                    <path d="M4.13656 7.16791L4.13659 7.16793L4.1406 7.16388L10.1891 1.05122C10.3812 0.857149 10.6934 0.853005 10.8905 1.04191L12.9146 2.98168C13.1174 3.17597 13.1204 3.49907 12.9213 3.69713L13.274 4.05158L12.9213 3.69713L7.15248 9.43664C6.56308 10.023 6.56308 10.977 7.15248 11.5634L12.9323 17.3137C13.1292 17.5097 13.1286 17.8286 12.931 18.0239L10.9793 19.9518C10.7849 20.1438 10.4723 20.1442 10.2774 19.9527L1.07423 10.9061C0.875244 10.7105 0.874851 10.3898 1.07336 10.1938L4.13656 7.16791Z" fill="url(#paint0_radial_767_3655)" fill-opacity="0.4"/>
+                    <path d="M4.13656 7.16791L4.13659 7.16793L4.1406 7.16388L10.1891 1.05122C10.3812 0.857149 10.6934 0.853005 10.8905 1.04191L12.9146 2.98168C13.1174 3.17597 13.1204 3.49907 12.9213 3.69713L13.274 4.05158L12.9213 3.69713L7.15248 9.43664C6.56308 10.023 6.56308 10.977 7.15248 11.5634L12.9323 17.3137C13.1292 17.5097 13.1286 17.8286 12.931 18.0239L10.9793 19.9518C10.7849 20.1438 10.4723 20.1442 10.2774 19.9527L1.07423 10.9061C0.875244 10.7105 0.874851 10.3898 1.07336 10.1938L4.13656 7.16791Z" stroke="url(#paint1_linear_767_3655)"/>
+                    <defs>
+                    <radialGradient id="paint0_radial_767_3655" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(7.20488 -0.954547) rotate(90) scale(17.4205 6.63711)">
+                    <stop stop-color="white"/>
+                    <stop offset="0.0001" stop-color="white"/>
+                    <stop offset="1" stop-color="white" stop-opacity="0"/>
+                    </radialGradient>
+                    <linearGradient id="paint1_linear_767_3655" x1="7" y1="19.8068" x2="7" y2="21" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#C55531" stop-opacity="0"/>
+                    <stop offset="0.9999" stop-color="#CE5023"/>
+                    </linearGradient>
+                    </defs>
+                </svg>                    
+            </a>
+            <a href="" class="ourwork__pagiantion__numpage">1</a>
+            <a href="" class="ourwork__pagiantion__numpage active">2</a>
+            <a href="" class="ourwork__pagiantion__numpage">3</a>
+            <a href="" class="ourwork__pagiantion__arrow">
+                <svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.86344 7.16791L9.86341 7.16793L9.8594 7.16388L3.81086 1.05122C3.61882 0.857149 3.30662 0.853005 3.1095 1.04191L1.08536 2.98168C0.882618 3.17597 0.879591 3.49907 1.07866 3.69713L6.84752 9.43664C7.43692 10.023 7.43692 10.977 6.84752 11.5634L1.06774 17.3137C0.870781 17.5097 0.871353 17.8286 1.06902 18.0239L3.02071 19.9518C3.21512 20.1438 3.52771 20.1442 3.72259 19.9527L12.9258 10.9061C13.1248 10.7105 13.1251 10.3898 12.9266 10.1938L9.86344 7.16791Z" fill="#315283"/>
+                    <path d="M9.86344 7.16791L9.86341 7.16793L9.8594 7.16388L3.81086 1.05122C3.61882 0.857149 3.30662 0.853005 3.1095 1.04191L1.08536 2.98168C0.882618 3.17597 0.879591 3.49907 1.07866 3.69713L6.84752 9.43664C7.43692 10.023 7.43692 10.977 6.84752 11.5634L1.06774 17.3137C0.870781 17.5097 0.871353 17.8286 1.06902 18.0239L3.02071 19.9518C3.21512 20.1438 3.52771 20.1442 3.72259 19.9527L12.9258 10.9061C13.1248 10.7105 13.1251 10.3898 12.9266 10.1938L9.86344 7.16791Z" fill="url(#paint0_radial_767_3656)" fill-opacity="0.4"/>
+                    <path d="M9.86344 7.16791L9.86341 7.16793L9.8594 7.16388L3.81086 1.05122C3.61882 0.857149 3.30662 0.853005 3.1095 1.04191L1.08536 2.98168C0.882618 3.17597 0.879591 3.49907 1.07866 3.69713L6.84752 9.43664C7.43692 10.023 7.43692 10.977 6.84752 11.5634L1.06774 17.3137C0.870781 17.5097 0.871353 17.8286 1.06902 18.0239L3.02071 19.9518C3.21512 20.1438 3.52771 20.1442 3.72259 19.9527L12.9258 10.9061C13.1248 10.7105 13.1251 10.3898 12.9266 10.1938L9.86344 7.16791Z" stroke="url(#paint1_linear_767_3656)"/>
+                    <defs>
+                    <radialGradient id="paint0_radial_767_3656" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(6.79512 -0.954547) rotate(90) scale(17.4205 6.63711)">
+                    <stop stop-color="white"/>
+                    <stop offset="0.0001" stop-color="white"/>
+                    <stop offset="1" stop-color="white" stop-opacity="0"/>
+                    </radialGradient>
+                    <linearGradient id="paint1_linear_767_3656" x1="7" y1="19.8068" x2="7" y2="21" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#C55531" stop-opacity="0"/>
+                    <stop offset="0.9999" stop-color="#CE5023"/>
+                    </linearGradient>
+                    </defs>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- ================================================================ -->
+<!-- ====================== END ourwork ============================= -->
+<!-- ================================================================ -->
+
+{% endblock %}

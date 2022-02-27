@@ -16,6 +16,28 @@
     }
 }
 
+.header__city {
+    position: relative;
+    &:hover {
+        .header__city__panel__wrapper {
+            visibility: visible;
+        }
+        .header__city__panel {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .header__city__icon {
+            transform: rotate(180deg);
+            path {
+                fill: @orange;
+            }
+        }
+        .header__city__title {
+            color: @orange;
+        }
+    }
+}
+
 .header__city__head {
     display: flex;
     align-items: center;
@@ -30,8 +52,42 @@
 
 .header__city__icon {
     margin-left: 14rem;
+    transition: 0.3s;
 }
 
+.header__city__panel__wrapper {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    padding-top: 30rem;
+    visibility: hidden;
+}
+
+.header__city__panel {
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 10rem;
+    border-radius: 5rem;
+    width: 256rem;
+    transition: 0.3s;
+    transform: translateY(10rem);
+    opacity: 0;
+}
+
+.header__city__panel__items {
+    width: max-content;
+    a {
+        padding: 5rem;
+        display: block;
+        font-size: 14rem;
+        color: @black;
+        font-weight: normal;
+        &:hover {
+            color: @orange;
+        }
+    }
+}
 
 .header__contact__icon {
     width: 26rem;
@@ -49,7 +105,7 @@
 }
 
 .header__contact__label {
-    color: #A5A5A5;
+    color: #a5a5a5;
     font-size: 14rem;
 }
 
@@ -97,15 +153,14 @@
 //     }
 // }
 
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
     .header {
         position: fixed;
         left: 0;
         top: 0;
         width: 100%;
         z-index: 5;
-        border-bottom: 1px solid #EFF2F6;
+        border-bottom: 1px solid #eff2f6;
     }
     .header__contact {
         display: none;

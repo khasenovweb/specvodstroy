@@ -1,0 +1,140 @@
+.contacts__mapblock {
+    margin-top: 32rem;
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    border-radius: 5rem;
+    overflow: hidden;
+    .about__left__social {
+        width: 23rem;
+        height: 23rem;
+        margin-right: 10rem;
+    }
+}
+
+.contacts__mapblock__text {
+    background-color: #fff;
+    padding: 30rem;
+    width: 546rem;
+}
+
+.contacts__mapblock__text__item {
+    margin-top: 15rem;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+.contacts__mapblock__text__item__title {
+    font-weight: bold;
+    font-size: 16rem;
+    &.big {
+        font-size: 20rem;
+    }
+}
+
+.contacts__mapblock__text__item__list {
+    margin-top: 6rem;
+    li {
+        margin-top: 3rem;
+        &:first-child {
+            margin-top: 0;
+        }
+        a {
+            color: @black;
+        }
+    }
+}
+
+.contacts__photos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 32rem;
+    grid-gap: 20rem;
+}
+
+.contacts__photo {
+    width: 100%;
+    padding-bottom: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5rem;
+}
+
+.contacts__requisites {
+    margin-top: 69rem;
+}
+
+.contacts__requisites__main {
+    background-color: #fff;
+    padding: 34rem;
+    margin-top: 37rem;
+}
+.contacts__requisites__main__list {
+    column-count: 2;
+    margin-top: 10rem;
+    li {
+        margin-top: 10rem;
+    }
+}
+.contacts__requisites__main__title {
+    font-weight: bold;
+    font-size: 20rem;
+}
+.contacts__requisites__partnercarddownload {
+    display: block;
+    margin: 0 auto;
+    margin-top: 38rem;
+    max-width: max-content;
+}
+
+@media screen and (max-width: 1000px) {
+    .contacts__photos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .contacts__mapblock {
+        grid-template-columns: 1fr;
+    }
+    .contacts__mapblock__map {
+        order: 1;
+        height: 250rem;
+    }
+    .contacts__mapblock__text {
+        width: 100%;
+        order: 2;
+        padding: 20rem;
+    }
+    .contacts__mapblock__text__item__title {
+        font-size: 14rem;
+        &.big {
+            font-size: 16rem;
+        }
+    }
+    .contacts__mapblock__text__item__list li {
+        font-size: 14rem;
+    }
+    .contacts__photos {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10rem;
+    }
+    .contacts__requisites {
+        margin-top: 40rem;
+    }
+    .contacts__requisites__main__list {
+        column-count: 1;
+        li {
+            font-size: 14rem;
+        }
+    }
+    .contacts__requisites__partnercarddownload {
+        margin-top: 30rem;
+    }
+    .contacts__requisites__main__title {
+        font-size: 18rem;
+    }
+    .contacts__requisites__main {
+        padding: 15rem;
+    }
+}

@@ -1,0 +1,79 @@
+.faq {
+    padding-top: 70rem;
+    padding-bottom: 60rem;
+}
+
+.faq__item {
+    border-radius: 5rem;
+    margin-top: 10rem;
+    border: 1px solid #f3f8fa;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.faq__items {
+    max-width: 844rem;
+    margin: 0 auto;
+    margin-top: 31rem;
+}
+.faq__item__header {
+    padding: 20rem 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fafbfd;
+    border-radius: 5rem;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    &.active {
+        background-color: @blue;
+        .faq__item__header__title {
+            color: white;
+        }
+        .faq__item__header__arrow {
+            transform: rotate(180deg);
+            path {
+                fill: white;
+            }
+        }
+    }
+}
+.faq__item__header__arrow {
+    transition: 0.3s;
+    width: 15rem;
+    min-width: 15rem;
+}
+.faq__item__header__title {
+    font-size: 16rem;
+    font-weight: 600;
+    padding-right: 20rem;
+}
+
+.faq__item__content {
+    border: 2px solid #f9fbfc;
+    padding: 20rem 25rem;
+    margin-top: -5rem;
+    border-radius: 5rem;
+    font-size: 14rem;
+    display: none;
+}
+.faq__quizblock {
+    padding-bottom: 35rem;
+}
+
+// ==============================================//
+// ================= MEDIA ======================//
+// ==============================================//
+
+@media screen and (max-width: 700px) {
+    .faq {
+        padding-top: 30rem;
+        padding-bottom: 47rem;
+    }
+}
+
+// ==============================================//
+// ============= END MEDIA ======================//
+// ==============================================//

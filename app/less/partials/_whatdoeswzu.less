@@ -1,0 +1,45 @@
+.whatdoeswzu__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 32rem;
+    grid-gap: 30rem;
+}
+
+.whatdoeswzu__item {
+}
+.whatdoeswzu__item__img {
+    width: 100%;
+    padding-bottom: 44%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.whatdoeswzu__item__title {
+    font-weight: bold;
+    font-size: 26rem;
+}
+
+.whatdoeswzu__item__text {
+    padding: 20rem;
+    background-color: #fff;
+}
+
+.whatdoeswzu__item__desc {
+    margin-top: 12rem;
+}
+.whatdoeswzu__item__list {
+    margin-top: 21rem;
+    .canvasblock__main__item {
+        margin-top: 20rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .whatdoeswzu__items {
+        grid-template-columns: 1fr;
+    }
+    .whatdoeswzu__item__title {
+        font-size: 18rem;
+    }
+}
