@@ -1,14 +1,17 @@
 <!-- ================================================================ -->
 <!-- ======================== worksmap ============================== -->
 <!-- ================================================================ -->
-<section class="worksmap">
+<section class="worksmap" id="worksmap">
     <div class="worksmap__content">
         <div class="container">
             <h2 class="sec__title center">Наши выполненые работы на карте</h2>
         </div>
         <div class="worksmap__map" id="worksmap__map"></div>
         <a href="" class="btn worksmap__btn">Посмотреть все работы</a>
-        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+        <script
+            src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
+            type="text/javascript"
+        ></script>
         <script>
             //Яндекс Карта
             ymaps.ready(init);
@@ -18,22 +21,25 @@
                 myMapAll = new ymaps.Map("worksmap__map", {
                     center: [55.725823, 49.189266],
                     zoom: 15,
-                    controls: []
+                    controls: [],
                 });
-                var myPlacemark_1 = new ymaps.Placemark([55.725823, 49.189266], {
-                    balloonContentHeader: "Название объекта",
-                    balloonContentBody: "<a target='blank' href='http://google.com'>Подробнее<a>",
-                    balloonContentFooter: "",
-                    hintContent: "Кликните для более подробной информации",
-                },
-                {
-                    // Необходимо указать данный тип макета.
-                    iconLayout: 'default#image',
-                    // Своё изображение иконки метки.
-                    iconImageHref: 'img/mapmarker.svg',
-                    // Размеры метки.
-                    iconImageSize: [24, 31],
-                }
+                var myPlacemark_1 = new ymaps.Placemark(
+                    [55.725823, 49.189266],
+                    {
+                        balloonContentHeader: "Название объекта",
+                        balloonContentBody:
+                            "<a target='blank' href='http://google.com'>Подробнее<a>",
+                        balloonContentFooter: "",
+                        hintContent: "Кликните для более подробной информации",
+                    },
+                    {
+                        // Необходимо указать данный тип макета.
+                        iconLayout: "default#image",
+                        // Своё изображение иконки метки.
+                        iconImageHref: "img/mapmarker.svg",
+                        // Размеры метки.
+                        iconImageSize: [24, 31],
+                    }
                 );
                 myMapAll.geoObjects.add(myPlacemark_1);
             }

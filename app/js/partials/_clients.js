@@ -2,7 +2,7 @@ $('.clients__slider').owlCarousel({
     items: 3,
     margin: 90,
     nav: true,
-    navText: ["<img src='img/slider-arrow-orange-left.svg'>","<img src='/img/slider-arrow-orange-right.svg' >"],
+    navText: ["<img src='/img/slider-arrow-orange-left.svg'>","<img src='/img/slider-arrow-orange-right.svg' >"],
     dotsContainer: '.clients__slider__dots',
     responsive: {
         0: {

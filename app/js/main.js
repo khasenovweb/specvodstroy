@@ -41,6 +41,17 @@ $(document).ready(function(){
 	    offset: 1000,
 	});
 
+    $("[data-scroll]").mPageScroll2id({
+        scrollSpeed: 900,
+        keepHighlightUntilNext: true,
+        offset: 104,
+        onStart:function(){
+            $('body').removeClass('overflowhidden');
+            $('.mobilenav').removeClass('active');
+            $('.header__hamburger').removeClass('active');
+        },
+    });
+
     if ( $('.anchors') ) {
         var header = new Headhesive(".anchors", {
             offset: 1000,
