@@ -47,6 +47,85 @@
     }
 }
 
+
+
+.alert {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    display: none;
+    &:before {
+        content: '';
+        display: block;
+        width: 45rem;
+        height: 45rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    &:after {
+        content: '';
+        font-size: 16rem;
+        font-weight: 600;
+        color: @black;
+        margin-top: 19rem;
+        text-align: center;
+    }
+    &.success {
+        display: flex;
+        &:before {
+            background-image: url(/static/img/alert-success.svg);
+        }
+        &:after {
+            content: 'Сообщение отправлено';
+        }
+    }
+    &.error {
+        display: flex;
+        &:before {
+            background-image: url(/static/img/alert-error.svg);
+        }
+        &:after {
+            content: "Ошибка! \0a Попробуйте еще раз!";
+            white-space: pre;
+        }
+    }
+    &.load {
+        display: flex;
+        &:before {
+            border: 4rem solid #E5E5E5;
+            border-radius: 100%;
+            border-top-color: #16990B;
+            animation: load 0.7s linear infinite;
+        }
+        &:after {
+            content: 'Отправка сообщения';
+        }
+    }
+}
+
+
+
+
+
+@keyframes load {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @media screen and (max-width: 850px) {
     .sec {
         padding-top: 30rem;
