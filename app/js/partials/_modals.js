@@ -2,35 +2,12 @@
 $('[data-modal-show]').click(function(){
     var id = $(this).attr('data-modal-show');
     $('[data-modal="'+id+'"]').css('display', 'flex');
-    // Даннные из карточки товара
-    var product_img = $(this).closest('.products__tab__contents__item').find('.products__tab__contents__item__img').attr('style');
-    var ptroduct_title = $(this).closest('.products__tab__contents__item').find('.products__tab__contents__item__title').text();
-    if(product_img) {
-        $('[data-modal="'+id+'"]').find('.modal__product__image').attr('style', product_img);
-        $('[data-modal="'+id+'"]').find('.modal__title').text('Заказать '+ ptroduct_title);
-        $('[data-modal="'+id+'"]').find('input[name="product"]').val(ptroduct_title);
-    }else {
-        console.log('нету product_img');
-    }
-    // END Даннные из карточки товара
-    // Даннные из карточки товара в сладере
-    var product_img = $(this).closest('.populars__slider__item').find('.populars__slider__item__img').attr('style');
-    var ptroduct_title = $(this).closest('.populars__slider__item').find('.populars__slider__item__title').text();
-    if(product_img) {
-        $('[data-modal="'+id+'"]').find('.modal__product__image').attr('style', product_img);
-        $('[data-modal="'+id+'"]').find('.modal__title').text('Заказать '+ ptroduct_title);
-        $('[data-modal="'+id+'"]').find('input[name="product"]').val(ptroduct_title);
-    }else {
-        console.log('нету product_img');
-    }
-    // END Даннные из карточки товара в сладере
     var scrollbar_width = get_scrollbar_width();
     $('body').css('padding-right', scrollbar_width+'px');
     $('body').addClass('body_hidden');
     setTimeout(function(){
         $('[data-modal="'+id+'"]').addClass('active');
     },1);
-    
 });
 // END Показываем всплывающее при нажатии на кнопку
 

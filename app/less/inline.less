@@ -60,6 +60,7 @@ body {
     border: none;
     cursor: pointer;
     transition: 0.3s;
+    position: relative;
     &:hover {
         background: radial-gradient(
                 47.41% 82.95% at 51.46% -4.55%,
@@ -83,7 +84,51 @@ body {
         opacity: 0.5;
         cursor: not-allowed;
     }
+    &.load {
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(
+                47.41% 82.95% at 51.46% -4.55%,
+                rgba(255, 255, 255, 0.4) 0%,
+                rgba(255, 255, 255, 0.4) 0.01%,
+                rgba(255, 255, 255, 0) 100%
+            ),
+            #ff4c0c;
+            border-radius: 5px;
+        }
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 20rem;
+            height: 20rem;
+            border: 2rem solid white;
+            border-top-color: transparent;
+            transform: translate(-50%, -50%);
+            border-radius: 100%;
+            animation: load_btn 0.7s linear infinite;
+        }
+    }
 }
+
+
+@keyframes load_btn {
+    0% {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
 .btn-icon {
     font-size: 18rem;
     padding: 24rem 30rem;
